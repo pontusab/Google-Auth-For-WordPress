@@ -1,6 +1,8 @@
 <?php
 
-class Google extends Exception
+namespace Auth;
+
+class Google extends \Exception
 {
 	public static $clientId;
 	public static $clientSecret;
