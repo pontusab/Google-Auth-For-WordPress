@@ -13,17 +13,6 @@ class Google extends \Exception
 	protected $code;
 	protected $token;
 
-	private static $Instance;
-
-
-    public static function Instance()
-    {
-        if( !isset( self::$Instance ) )
-        {
-            self::$Instance = new self;
-        }
-        return self::$Instance;
-    }
 
 	
     /**
