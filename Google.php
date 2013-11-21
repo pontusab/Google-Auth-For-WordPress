@@ -15,14 +15,14 @@ class Google extends \Exception
 
 
 	
-    /**
-     * Add information from: https://code.google.com/apis/console/
-     *
-     * @param Google::$clientId The Client ID.
-     * @param Google::$clientSecret The Client secret.
-     * @param $redirectUri The Redirect Url.
-     * @param $code The callback code.
-     */
+	/**
+	* Add information from: https://code.google.com/apis/console/
+	*
+	* @param Google::$clientId The Client ID.
+	* @param Google::$clientSecret The Client secret.
+	* @param $redirectUri The Redirect Url.
+	* @param $code The callback code.
+	*/
 
 	public function __construct()
 	{
@@ -56,10 +56,10 @@ class Google extends \Exception
 
 
 	/**
-     * Handles incoming authentication requests.
-     *
-     * @param Request $request The request object.
-     */
+	* Handles incoming authentication requests.
+	*
+	* @param Request $request The request object.
+	*/
 
 	public function handle()
 	{
@@ -104,11 +104,11 @@ class Google extends \Exception
 
 
 	/**
-     * Gets the user info from Google
-     * 
-     * @param Token $token generated from handle() function
-     * @return Object user data
-     */
+	* Gets the user info from Google
+	* 
+	* @param Token $token generated from handle() function
+	* @return Object user data
+	*/
 
 	public function userInfo( $token )
 	{
@@ -129,11 +129,11 @@ class Google extends \Exception
 
 
 	/**
-     * Generate login/logout links
-     * 
-     * @param $loginText and logoutText 
-     * @return html link
-     */
+	* Generate login/logout links
+	* 
+	* @param $loginText and logoutText 
+	* @return html link
+	*/
 
 	public function loginOut( $loginText = false, $logoutText = false, $class = false )
 	{
@@ -159,14 +159,14 @@ class Google extends \Exception
 	}
 
 	/**
-     * Try to find a specific user based on the Google response
-     * Else add a new user to WordPress
-     * 
-     * @param $user data from the API response
-     */
+	* Try to find a specific user based on the Google response
+	* Else add a new user to WordPress
+	* 
+	* @param $user data from the API response
+	*/
 
 	public function findUser( $user )
-    {
+    	{
     	try 
 	    {
 	    	if( strstr( $user->email, Google::$domain ) !== FALSE )
