@@ -1,9 +1,9 @@
 Google-Auth-For-WordPress
 =========================
 ```
-Google::$clientId     = ''; // Client id from Google API console
-Google::$clientSecret = ''; // Client secret from Google API console
-Google::$scope        = ''; // Wanted scopes, profile email openid
-Google::$domain       = ''; // Lock the login by domain
-Google::$role         = ''; // The new authenticated users role, WordPress "subscriber" and so on.
+Auth\Google::$clientId     = ''; // Client id from Google API console
+Auth\Google::$clientSecret = ''; // Client secret from Google API console
+Auth\Google::$scope        = ''; // Wanted scopes, profile email openid
+Auth\Google::$domain       = ''; // Lock the login by domain
+Auth\Google::$role         = ''; // The new authenticated users role, WordPress "subscriber" and so on.
 ```
